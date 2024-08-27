@@ -47,7 +47,7 @@ const CartModal = () => {
           {/* LIST */}
           <div className="flex flex-col gap-8">
             {/* ITEM */}
-            {cart.lineItems.map((item) => (
+            {cart.lineItems.map((item: any) => (
               <div className="flex gap-4" key={item._id}>
                 {item.image && (
                   <Image
@@ -104,7 +104,7 @@ const CartModal = () => {
           <div className="">
             <div className="flex items-center justify-between font-semibold">
               <span className="">Subtotal</span>
-              <span className="">${cart.subtotal.amount}</span>
+              <span className="">${cart?.subtotal.amount}</span>
             </div>
             <p className="text-gray-500 text-sm mt-2 mb-4">
               Shipping and taxes calculated at checkout.
